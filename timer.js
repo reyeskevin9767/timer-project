@@ -9,6 +9,7 @@ class Timer {
       this.onStart = callbacks.onStart;
       this.onTick = callbacks.onTick;
       this.onComplete = callbacks.onComplete;
+      this.onPause = callbacks.onPause;
     }
 
     //* Event Listeners
@@ -26,9 +27,10 @@ class Timer {
     this.interval = setInterval(this.tick, 20);
   };
 
-  //* Pauses the interval
+  //* Pauses the timer
   pause = () => {
     clearInterval(this.interval);
+    this.onPause();
   };
 
   //* Responsible for the timer counting down

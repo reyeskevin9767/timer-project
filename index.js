@@ -16,22 +16,39 @@ let duration;
 const timer = new Timer(durationInput, startButton, pauseButton, {
   //* Hook Timer to the real world
   onStart(totalDuration) {
-    timerDone.innerText = ""
+    timerDone.innerText = '';
+    startButton.disabled = true;
+
+    for (let button of prefinedButtons) {
+      button.disabled = true;
+    }
+
     duration = totalDuration;
   },
+
   onTick(timeRemaining) {
     circle.setAttribute(
       'stroke-dashoffset',
       (perimeter * timeRemaining) / duration - perimeter
     );
 
-    if (circle.getAttribute('stroke-dashoffset') < -perimeter / 2) {
+    if (circle.getAttribute('stroke-dashoffset') < -perimeter / 1.5) {
       circle.setAttribute('stroke', 'red');
+    } else if (circle.getAttribute('stroke-dashoffset') < -perimeter / 3.5) {
+      circle.setAttribute('stroke', 'yellow');
     } else {
       circle.setAttribute('stroke', 'green');
     }
   },
+
   onComplete() {
     timerDone.innerText = 'Timer Is Done';
+  },
+
+  onPause() {
+    startButton.disabled = false;
+    for (let button of prefinedButtons) {
+      button.disabled = false;
+    }
   },
 });
