@@ -21,11 +21,24 @@ class Timer {
     clearInterval(this.interval);
   };
 
-  //* Take value from input and countdown
+  //* Take value from input and countdown by 1
   tick = () => {
-    const timeRemaining = parseFloat(this.durationInput.value);
-    this.durationInput.value = timeRemaining - 1;
+    if (this.timeRemaining <= 0) {
+      this.pause();
+    } else {
+      this.timeRemaining = this.timeRemaining - 1;
+    }
   };
+
+  //* Instance variable to get input value
+  get timeRemaining() {
+    return parseFloat(this.durationInput.value);
+  }
+
+  //* Instance variable to set input value
+  set timeRemaining(time) {
+    this.durationInput.value = time;
+  }
 }
 
 //* Select DOM elements
