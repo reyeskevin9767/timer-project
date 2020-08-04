@@ -21,8 +21,10 @@ class Timer {
     clearInterval(this.interval);
   };
 
+  //* Take value from input and countdown
   tick = () => {
-    console.log('tick');
+    const timeRemaining = parseFloat(this.durationInput.value);
+    this.durationInput.value = timeRemaining - 1;
   };
 }
 
@@ -31,5 +33,5 @@ const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 
-//* Create a new instance of Timer
+//* New instance of Timer
 const timer = new Timer(durationInput, startButton, pauseButton);
