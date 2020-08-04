@@ -35,7 +35,7 @@ class Timer {
     return parseFloat(this.durationInput.value);
   }
 
-  //* Instance variable to set value
+  //* Instance variable to set input value
   set timeRemaining(time) {
     this.durationInput.value = time;
   }
