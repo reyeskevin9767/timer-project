@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/50b6ec9f41.js"
       crossorigin="anonymous"
@@ -12,33 +16,50 @@
   </head>
 
   <body>
-    <div class="timer">
-      <div class="controls">
-        <input id="duration" value="3" />
+    <div class="container">
+      <div class="notification">
+        <div class="timer">
+          <div class="controls">
+            <input id="duration" value="3" />
 
-        <!-- Start and Pause Buttons  -->
-        <div>
-          <button id="start"><i class="fas fa-play"></i></button>
-          <button id="pause"><i class="fas fa-pause"></i></button>
+            <!-- Start and Pause Buttons  -->
+            <div>
+              <button id="start"><i class="fas fa-play"></i></button>
+              <button id="pause"><i class="fas fa-pause"></i></button>
+            </div>
+            <p></p>
+          </div>
+
+          <!-- Circle  -->
+          <svg class="dial">
+            <circle
+              fill="transparent"
+              stroke="green"
+              stroke-width="15"
+              r="190"
+              cx="0"
+              cy="200"
+              transform="rotate(-90 100 100)"
+            />
+          </svg>
         </div>
-        <p></p>
+        <section class="section">
+          <div class="container">
+            <h1 class="title">Predefined Times</h1>
+            <h2 class="subtitle">
+              <button class="d-5" value="5">15 Mins</button>
+              <button class="d-10" value="10">30 Mins</button>
+              <button class="d-15" value="15">45 Mins</button>
+              <button class="d-20" value="20">60 Mins</button>
+              <button class="d-25" value="25">120 Mins</button>
+            </h2>
+          </div>
+        </section>
       </div>
-
-      <!-- Circle  -->
-      <svg class="dial">
-        <circle
-          fill="transparent"
-          stroke="green"
-          stroke-width="15"
-          r="190"
-          cx="0"
-          cy="200"
-          transform="rotate(-90 100 100)"
-        />
-      </svg>
     </div>
 
     <!-- Timer and Index Scripts -->
+    <script src="events.js"></script>
     <script src="timer.js"></script>
     <script src="index.js"></script>
   </body>

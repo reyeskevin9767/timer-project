@@ -1,5 +1,5 @@
-/* Font Change */
-* {
+ /* Font Change */
+ * {
   font: inherit;
 }
 
@@ -15,11 +15,18 @@ body {
   width: 400px;
 }
 
-/* Centers Timer and Buttons Inside Circle */
+/* Center the circle */
+svg{
+  margin-top: 50px
+}
+
+/* Centers Timer and Buttons Inside Circle */ 
 .timer {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
+
 
 /* Position Timer Input */
 .timer input {
@@ -47,7 +54,7 @@ body {
   outline: none;
 }
 
-/* Places Timer and Buttons Inside Circle */
+/* Places Timer and Buttons Inside Circle */ 
 .controls {
   position: absolute;
   top: 0;
