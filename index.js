@@ -23,9 +23,18 @@ class Timer {
 
   //* Take value from input and countdown
   tick = () => {
-    const timeRemaining = parseFloat(this.durationInput.value);
-    this.durationInput.value = timeRemaining - 1;
+    this.timeRemaining = this.timeRemaining - 1;
   };
+
+  //* Instance variable to get input value
+  get timeRemaining() {
+    return parseFloat(this.durationInput.value);
+  }
+
+  //* Instance variable to set value
+  set timeRemaining(time) {
+    this.durationInput.value = time
+  }
 }
 
 //* Select DOM elements
