@@ -3,16 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timer Project</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/50b6ec9f41.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <!-- Timer Input -->
-    <input id="duration" value="30" />
+    <div class="timer">
+      <div class="controls">
+        <input id="duration" value="3" />
 
-    <!-- Start and Pause Buttons -->
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
+        <!-- Start and Pause Buttons  -->
+        <div>
+          <button id="start"><i class="fas fa-play"></i></button>
+          <button id="pause"><i class="fas fa-pause"></i></button>
+        </div>
+        <p></p>
+      </div>
 
+      <!-- Circle  -->
+      <svg class="dial">
+        <circle
+          fill="transparent"
+          stroke="green"
+          stroke-width="15"
+          r="190"
+          cx="0"
+          cy="200"
+          transform="rotate(-90 100 100)"
+        />
+      </svg>
+    </div>
+
+    <!-- Timer and Index Scripts -->
     <script src="timer.js"></script>
     <script src="index.js"></script>
   </body>
