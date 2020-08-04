@@ -19,6 +19,11 @@ class Timer {
 
   //* Starts the timer
   start = () => {
+
+    if(isNaN(this.timeRemaining)){
+      this.timeRemaining = 5;
+    }
+
     if (this.onStart) {
       this.onStart(this.timeRemaining);
     }
