@@ -1,0 +1,61 @@
+/* Font Change */
+* {
+  font: inherit;
+}
+
+/* Fonts */
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Fills The Rest Of The Circle */
+.dial {
+  height: 400px;
+  width: 400px;
+}
+
+/* Centers Timer and Buttons Inside Circle */
+.timer {
+  position: relative;
+  display: inline-block;
+}
+
+/* Position Timer Input */
+.timer input {
+  display: block;
+  border: none;
+  width: 240px;
+  font-size: 90px;
+  text-align: center;
+}
+
+/* Changes Buttons */
+.timer button {
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* Removes Outline On Buttons */
+.timer button:focus {
+  outline: none;
+}
+
+/* Removes Outline On Input */
+.timer input:focus {
+  outline: none;
+}
+
+/* Places Timer and Buttons Inside Circle */
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
