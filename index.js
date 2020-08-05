@@ -11,10 +11,10 @@ circle.setAttribute('stroke-dasharray', perimeter);
 
 const countDownColor = circle.getAttribute('stroke');
 
-let duration;
 //* New instance of Timer, fourth argument (optional callbacks)
+let duration;
 const timer = new Timer(durationInput, startButton, pauseButton, {
-  //* Hook Timer to the real world
+  // Hook Timer to the real world
   onStart(totalDuration) {
     timerDone.innerText = '';
     startButton.disabled = true;
